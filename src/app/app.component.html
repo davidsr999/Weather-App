@@ -1,0 +1,14 @@
+
+<nav class="nav">
+  <div class="nav_menu">
+    <a class="brand" [routerLink]="['/']">Weather App</a>
+  </div>
+</nav>
+
+<div class="container mx-auto" >
+  <app-search (submited)="onSearch($event)"></app-search>
+  <!-- <app-weather *ngIf="weather$ | async as weather" [weather]="weather"></app-weather> -->
+  <app-weather *ngIf="weatcherResult" [weather]="weatcherResult" style="position: relative; bottom: 1.5rem;"></app-weather>
+</div>
+
+<!-- {{weatcherResult | json}} -->
